@@ -1,0 +1,12 @@
+{
+    "name": "react_web-native",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "install": "cd shared && yarn install && yarn link && cd ../native && yarn install && yarn link shared && cd ../web && yarn install && yarn link shared",
+        "run-web-dev": "concurrent \"cd shared && yarn build:watch\" \"cd web && yarn start\" "
+    },
+    "devDependencies": {
+        "concurrently": "^3.5.1"
+    }
+}
